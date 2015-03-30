@@ -1,0 +1,25 @@
+{
+  "GR16" : [ "TOKYO MX", "MX" ],
+  "GR21" : [ "フジテレビ", "CS" ],
+  "GR22" : [ "TBS", "TBS" ],
+  "GR23" : [ "テレビ東京", "TX" ],
+  "GR24" : [ "テレビ朝日", "ANB" ],
+  "GR25" : [ "日本テレビ", "NTV" ],
+  "GR26" : [ "NHK Eテレ", "NHK-E" ],
+  "GR27" : [ "NHK総合", "NHK-G" ],
+
+  "BS101" : [ "NHK-BS1", "NHK-BS1" ],
+  "BS103" : [ "NHK BSプレミアム", "NHK-BSP" ],
+  "BS141" : [ "BS日テレ", "BS4" ],
+  "BS151" : [ "BS朝日", "BSA" ],
+  "BS161" : [ "BS-TBS", "BS-TBS" ],
+  "BS171" : [ "BS Japan", "BSJ" ],
+  "BS181" : [ "BSフジ", "BS-FUJI" ],
+  "BS191" : [ "WOWOWプライム", "WOWOWプライム" ],
+  "BS192" : [ "WOWOWライブ", "WOWOWライブ" ],
+  "BS193" : [ "WOWOWシネマ", "WOWOWシネマ" ],
+  "BS211" : [ "BS11デジタル", "BS11" ],
+  "BS222" : [ "TwellV", "TwellV" ],
+  "BS236" : [ "BSアニマックス", "BS-ANIMAX" ],
+  "BS258" : [ "Dlife", "Dlife" ]
+}
