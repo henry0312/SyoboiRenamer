@@ -62,6 +62,7 @@ begin
     end
 
     filepath = "#{File.dirname(recorded_data_path)}/#{File.dirname(filename)}/#{File.basename(filename, '.m2ts').strip}.m2ts"
+    raise "#{filepath} already exists." if File.exist? filepath
 
     # make directories
     unless File.exist? File.dirname(filepath)
