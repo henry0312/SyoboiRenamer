@@ -5,7 +5,6 @@ require 'net/http'
 require 'uri'
 require 'json'
 require 'time'
-require 'date'
 require 'nkf'
 require 'fileutils'
 require_relative 'config'
@@ -19,8 +18,8 @@ end
 begin
   recorded_data_path = ARGV[0]
   time, title, channel = File.basename(recorded_data_path, '.m2ts').split('_')
-  start_time = DateTime.strptime(time, '%y%m%d%H%M') - Rational(1 * 15, 24 * 60)
-  end_time = DateTime.strptime(time, '%y%m%d%H%M') + Rational(1 * 45, 24 * 60)
+  start_time = Time.strptime(time, '%y%m%d%H%M') - 15*60
+  end_time = Time.strptime(time, '%y%m%d%H%M') + 45*60
 
   # pre-replace
   if /darwin/ =~ RUBY_PLATFORM
