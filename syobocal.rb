@@ -29,7 +29,6 @@ begin
   REPLACE['pre'].each do |ary|
     title.gsub!(ary[0], ary[1])
   end
-  title = NKF.nkf('-m0Z1 -w', title)
 
   # search
   filename = TEMPLATE
@@ -38,7 +37,7 @@ begin
 
   if JSON.load(json)['items'].each do |program|
     # replace
-    if program['ChName'] == CHANNEL[channel][0] && program['Title'].include?(title[0...5].strip)
+    if program['ChName'] == CHANNEL[channel][0] && ( program['Title'].include?(title[0...5].strip) || program['Title'].include?(NKF.nkf('-m0Z1 -w', title)[0...5].strip) )
       next unless start_time < Time.at(program['StTime'].to_i) && Time.at(program['EdTime'].to_i) < end_time
 
       filename.gsub!("$StTime$", Time.at(program['StTime'].to_i).strftime('%y%m%d'))
