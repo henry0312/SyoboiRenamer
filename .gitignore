@@ -1,5 +1,6 @@
 *.m2ts
 *.ts
+*.log
 
 # Created by https://www.gitignore.io
 
