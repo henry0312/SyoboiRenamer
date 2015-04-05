@@ -17,7 +17,8 @@ end
 
 begin
   recorded_data_path = ARGV[0]
-  time, title, channel = File.basename(recorded_data_path, '.m2ts').split('_')
+  basename, *ext = File.basename(recorded_data_path).split('.')
+  time, title, channel = basename.split('_')
   start_time = Time.strptime(time, '%y%m%d%H%M') - 15*60
   end_time = Time.strptime(time, '%y%m%d%H%M') + 75*60
 
@@ -61,7 +62,7 @@ begin
       filename.gsub!(ary[0], ary[1])
     end
 
-    filepath = "#{File.dirname(recorded_data_path)}/#{File.dirname(filename)}/#{File.basename(filename, '.m2ts').strip}.m2ts"
+    filepath = "#{File.dirname(recorded_data_path)}/#{File.dirname(filename)}/#{File.basename(filename).strip}.#{ext.join('.')}"
     raise "#{filepath} already exists." if File.exist? filepath
 
     # make directories
