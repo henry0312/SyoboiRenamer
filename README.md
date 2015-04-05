@@ -28,7 +28,7 @@ USER = "henry"
 リネーム後のファイル名テンプレートを設定してください。
 
 ```ruby
-TEMPLATE = "$Title$/[$StTime$][$ChName$] $Title$ \#$Count$ $SubTitle$.m2ts"
+TEMPLATE = "$Title$/[$StTime$][$ChName$] $Title$ \#$Count$ $SubTitle$"
 ```
 
 使える書式は以下の通りです。
@@ -76,7 +76,7 @@ TEMPLATE = "$Title$/[$StTime$][$ChName$] $Title$ \#$Count$ $SubTitle$.m2ts"
 
 ### Chinachu
 
-Chinachuの`recordedFormat`を以下のように変更してください。
+Chinachuの`recordedFormat`を以下のように変更してください（拡張子は自由）。
 
 ```json
 "recordedFormat": "<date:yymmddHHMM>_<title>_<type><channel>.m2ts"
