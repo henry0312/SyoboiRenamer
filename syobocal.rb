@@ -17,8 +17,8 @@ end
 
 begin
   recorded_data_path = ARGV[0]
-  basename, *ext = File.basename(recorded_data_path).split('.')
-  time, title, channel = basename.split('_')
+  time, title, channel = File.basename(recorded_data_path).split('_')
+  channel, *ext = channel.split('.')
   title, sub_title = title.split('「')  # FIXME
   start_time = Time.strptime(time, '%y%m%d%H%M') - 15*60
   end_time = Time.strptime(time, '%y%m%d%H%M') + 75*60
